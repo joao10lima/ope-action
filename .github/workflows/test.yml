@@ -5,14 +5,11 @@ on:
       - main
 jobs:
   test:
-    name: "Operous ssh test"
+    name: "Operous ssh test action"
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - run: |
-          yarn
-      - name: Run Operous ssh test
-        uses: ./
+      - name: Operous SSH Check
+        uses: operous/test-ssh-action@0.1.0-rc.3
         with:
           accountToken: ${{ secrets.OPEROUS_ACCOUNT_TOKEN }}
-          instanceName: ${{ secrets.OPEROUS_ACCOUNT_INSTANCE }}
+          serverIds: "wDK3idtzjWlsezC9,hCkhyiR5eT7kXjs5"
