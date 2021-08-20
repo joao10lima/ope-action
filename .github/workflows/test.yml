@@ -12,4 +12,4 @@ jobs:
         uses: operous/test-ssh-action@0.1.0-rc.3
         with:
           accountToken: ${{ secrets.OPEROUS_ACCOUNT_TOKEN }}
-          serverIds: "wDK3idtzjWlsezC9,hCkhyiR5eT7kXjs5"
+          serverIds: "wDK3idtzjWlsezC9"
